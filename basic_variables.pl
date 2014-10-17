@@ -45,9 +45,9 @@ sub array_2 {
 
 ##array of strings, using double quotes
 sub array_4 {
-  @array_of_strings = ("timothy.nordloh\@ngc.com", 
-                      "randall.ellefsen\@ngc.com",
-                      "dan.fenzl\@ngc.com");
+  @array_of_strings = ("timothy.nord\@whatever.com", 
+                      "randall.elle\@whatever.com",
+                      "dan.fen\@whatever.com");
   foreach (@array_of_strings)  {
     print "looping through addresses: current value is $_\n"
   }
@@ -55,8 +55,8 @@ sub array_4 {
 #
 #array of strings using single quote
 sub array_5 {
-  @array_of_strings = ('timothy.nordloh\@ngc.com',
-                       'randall.ellefsen@ngc.com');
+  @array_of_strings = ('timothy.nord\@whatever.com',
+                       'randall.elle@whatever.com');
   foreach (@array_of_strings)  {
     print "single_quote example: current value is $_\n"
   }
@@ -64,7 +64,7 @@ sub array_5 {
 #
 #array of strings using qw
 sub array_6 {
-  @array_of_strings = qw(timothy.nordloh@ngc.com randall.ellefsen@ngc.com);
+  @array_of_strings = qw(timothy.nord@whatever.com randall.elle@whatever.com);
 
   foreach (@array_of_strings)  {
     print "qw example: current value is $_\n"
