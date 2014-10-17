@@ -1,9 +1,9 @@
 tim
-timothy.nordloh@ngc.com
+timothy.nor@whatever.com
 person
 randy
-randall.ellefsen@ngc.com
+randall.elle@whatever.com
 person
 dan
-dan.fenzl@ngc.com
+dan.fen@whatever.com
 person
