@@ -35,6 +35,7 @@ sub parse_3 {
 }
 
 sub parse_4 {
+  say "demo parsing multi-line file";
   local $/ = "person\n"; 
   open (MYFILE, 'parse_multi_lines.txt');
   %list;
@@ -43,6 +44,17 @@ sub parse_4 {
     $list{$name}= $email;
   }
   close MYFILE;
+  return %list;
+}
+
+sub parse_5 {
+  say "demo parsing from command line input";
+  local $/ = "person\n"; 
+  %list;
+  while(<>) {
+    ($name,$email) = split(/\n/s,$_);
+    $list{$name}= $email;
+  }
   return %list;
 }
 
