@@ -1,49 +1,72 @@
-#!/usr/bin/perl
 #basic example
 
 #perl will automatically convert a numeric value to string, 
 #when trying to print
 #Variables are most often prepended with $
-$number = 1;
 
 #printing number without \n
-print "$number";
+$number = 1; #this is a global variable
+
+sub number_1 {
+  print "$number";
+}
 #print number with a \n
-print "$number\n";
-#add 1 to a number?  Not quite
-print "$number + 1\n";
-#add one to a number for real
-print $number+1 ."\n";
 
-#Arrays are prepended with a @
-@array= (1,2);
+sub number_2 {
+  print "${number}\n";
+}
+##add 1 to a number?  Not quite
 
-print "array value stored in 0:@array[0]\n";
-print "array value stored in 0:@array[1]\n";
+sub number_3 {
+  print "$number + 1\n";
+}
+##add one to a number for real
 
-foreach (@array)  {
-  print "looping through values: current value is $_\n"
+sub number_4 {
+  print $number+1 ."\n";
+}
+#
+##array variables are prepended with a @
+
+
+sub array_1 {
+  @array= (1,2);
+  print "array value stored in 0:@array[0]\n";
+  print "array value stored in 0:@array[1]\n";
 }
 
-#array of strings, using double quotes
-@array_of_strings = ("timothy.nordloh\@ngc.com", "randall.ellefsen\@ngc.com");
-
-foreach (@array_of_strings)  {
-  print "looping through addresses: current value is $_\n"
+#looping through an array
+sub array_2 {
+  @array= (1,2);
+  foreach (@array)  {
+    print "looping through values: current value is $_\n"
+  }
 }
 
+##array of strings, using double quotes
+sub array_4 {
+  @array_of_strings = ("timothy.nordloh\@ngc.com", 
+                      "randall.ellefsen\@ngc.com",
+                      "dan.fenzl\@ngc.com");
+  foreach (@array_of_strings)  {
+    print "looping through addresses: current value is $_\n"
+  }
+}
+#
 #array of strings using single quote
-@array_of_strings = ('timothy.nordloh\@ngc.com', 'randall.ellefsen@ngc.com');
-
-foreach (@array_of_strings)  {
-  print "single_quote example: current value is $_\n"
+sub array_5 {
+  @array_of_strings = ('timothy.nordloh\@ngc.com',
+                       'randall.ellefsen@ngc.com');
+  foreach (@array_of_strings)  {
+    print "single_quote example: current value is $_\n"
+  }
 }
-
+#
 #array of strings using qw
-@array_of_strings = qw(timothy.nordloh@ngc.com randall.ellefsen@ngc.com);
+sub array_6 {
+  @array_of_strings = qw(timothy.nordloh@ngc.com randall.ellefsen@ngc.com);
 
-foreach (@array_of_strings)  {
-  print "qw example: current value is $_\n"
+  foreach (@array_of_strings)  {
+    print "qw example: current value is $_\n"
+  }
 }
-
-
